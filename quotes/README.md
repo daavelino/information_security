@@ -4,7 +4,8 @@
 Jay Coen Gilbert
 Cofounder
 B Corporation
-Ref: Alina Wheeler, Designing Brand Identity, fifth edition. an essential guide for the whole branding team
+
+ref: Alina Wheeler, Designing Brand Identity, fifth edition. an essential guide for the whole branding team
 
 ## Branding
 > Build your brand by guiding, influencing, and being—not telling
