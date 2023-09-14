@@ -12,12 +12,26 @@ ISO definition of risk
 >-	Note 6 to entry: Information security risk is associated with the potential that threats will exploit vulnerabilities of an information asset or group of information assets and thereby cause harm to an organization.
 
 ## Risk entry for a Vulnerability Management program
-- Risk:
+- **Risk:**
 *The deviation from the business objectives caused by the exploitation of a system with vulnerable instructions or components.*
 
--	Rational:
+-	**Rational:**
 *A code should be understood in this context as an abstract set of rules intended to instruct computers - or, when multiple computers are coordinated to perform a given task, a system - to perform a designated task that support the achievement of a business objective. If the instructions are incorrectly stated, there is not guarantee that the business objective will be achieved. If a specific set of instructions designed to prevent systems from deviate from their business objectives of confidentiality, integrity and availability is missing, one can say that the sytem is vulnerable and, for that, there is no guarantee that neither the business objectives nor the user needs can be satisfied as intended and, in some cases, some damage shall be considered as expected.*
 
--	Framing:
+-	**Framing:**
 
--	Business objective: *The instructions for all systems should produce the intended outcome in a not vulnerable way.*
+-	**Business objective:** *The instructions for all systems should produce the intended outcome in a not vulnerable way.*
+
+- **Uncertainty and controls:**
+
+| Uncertainty | Control (logical operator AND applies)   |Control fails when (logical operator OR applies)|
+| ----------- | ----------- | ----------- |
+| The status of a system in terms of vulnerable code or dependencies may change with time.| Include in the vulnerability management program a mechanism to periodically check and alert against vulnerable code and dependencies present in the deployed systems and in the code database.|There is no mechanism in place OR he mechanism is in place, but not all systems are being checked OR he mechanism is in place, but periodically checks are fails.|
+|Not all used code can be controlled by the company.|Include in the vulnerability management program a mechanism to rank vulnerable outsourced providers and inform product owners about the frequency of vulnerability discovery and fixes, for consideration.|There is no ranking mechanism in place OR the ranking mechanism is in place, but not properly communicated OR there is evidence of usage of poorly ranked outsource providers.|
+|Not all information regarding system’s interdependencies can be surelly know by all stakeholders during the development phase.|Ensure clear documentation and communication of the important features of the systems and their intended objectives. Include a validation mechanism for each system integration that prevents and alert in case of suspicion of unexpected behavior of a system interdependency (default deny policy).|There is no documentation of the imporant features in place OR the documentation exists but it is not clearly understandable OR there are no preventive mechanisms in place to protect against vulnerable interdependencies OR there are insufficient preventive mechanisms in place.|
+|Not all the possible outcomes of different use cases and integrations can be tested and validated during the development phase (exploitability).|Ensure frequent independent manual inspection in all the integration tests (via penetration testing, for example).|There is no independent manual inspection in place OR independent manual inspection is in place but not frequently triggered.|
+|A minimal level of error should be expected during the development phase.|Introduce an Error Detection and Correction program including, at least: 1. Checklist of minimal security controls with Four-Eyes Principle validation, 2. Threat modeling (when possible), 3. Static Application Security Testing (SAST) (when possible).|There is no Error Detection and Correction mechanism in place.|
+|A minimal level of vulnerable code should be expected for every system.|Implement procedures to report vulnerabilities found and to mitigate their effects on vulnerable systems in a timely manner.|There are no procedures to report and mitigate vulnerabilities OR procedures to report and mitigate vulnerabilities are in place but are not efficient to mitigate vulnerabilities in a timely manner.|
+|The effects of exposing vulnerable systems cannot be fully predicted.|Introduce a monitoring and alert program for suspicious behavior and train staff on how to react on suspicious cases.|There is no monitoring and alert program in place OR there is no training of staff on how to react on suspicious cases OR there are monitor or training program but they are insufficient to produce an adequate response in case of suspicious.|
+|The effectiveness of the vulnerability program cannot be take as granted|Introduce measurable indicators of performance including, at least: the progress of vulnerabilities detected and fixed AND the reduction of the likelihood of occurency of vulnerabilities AND the improvement of the timelines to fix vulnerable code AND the awareness on the main vulnerabilities detected by the program AND the training on how to detect and correct the main vulnerabilities detected by the program.|There are no measurable indicators of performance in place OR measurable indicators of performance are in place but at least one of the minimal required indicators is missing.|
+
