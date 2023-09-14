@@ -3,26 +3,27 @@ ISO definition of risk
 >ISO/IEC 27000:2018 defines [risk](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.61) as following:
 >3.61
 >risk
->effect of uncertainty on objectives, with the following notes:
+>effect of uncertainty on [objectives](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.49), with the following notes:
 >-	Note 1 to entry: An effect is a deviation from the expected — positive or negative.
->-	Note 2 to entry: Uncertainty is the state, even partial, of deficiency of information related to, understanding or knowledge of, an event, its consequence, or likelihood.
->-	Note 3 to entry: Risk is often characterized by reference to potential “events” (as defined in ISO Guide 73:2009, 3.5.1.3) and “consequences” (as defined in ISO Guide 73:2009, 3.6.1.3), or a combination of these.
->-	Note 4 to entry: Risk is often expressed in terms of a combination of the consequences of an event (including changes in circumstances) and the associated “likelihood” (as defined in ISO Guide 73:2009, 3.6.1.1) of occurrence.
+>-	Note 2 to entry: Uncertainty is the state, even partial, of deficiency of information related to, understanding or knowledge of, an [event](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.21), its consequence, or [likelihood](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.40).
+>-	Note 3 to entry: Risk is often characterized by reference to potential “events” (as defined in ISO Guide 73:2009, 3.5.1.3) and “[consequences](https://www.iso.org/obp/ui/#iso:std:iso:guide:73:ed-1:v1:en:term:3.6.1.3)” (as defined in ISO Guide 73:2009, 3.6.1.3), or a combination of these.
+>-	Note 4 to entry: Risk is often expressed in terms of a combination of the consequences of an [event](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.21) (including changes in circumstances) and the associated “[likelihood](https://www.iso.org/obp/ui/#iso:std:iso:guide:73:ed-1:v1:en:term:3.6.1.1)” (as defined in ISO Guide 73:2009, 3.6.1.1) of occurrence.
 >-	Note 5 to entry: In the context of information security management systems, information security risks can be expressed as effect of uncertainty on information security objectives.
 >-	Note 6 to entry: Information security risk is associated with the potential that threats will exploit vulnerabilities of an information asset or group of information assets and thereby cause harm to an organization.
 
 ## Risk entry for a Vulnerability Management program
-- **Risk:**
+### **Risk**
 *The deviation from the business objectives caused by the exploitation of a system with vulnerable instructions or components.*
 
--	**Rational:**
+### **Rational**
 *A code should be understood in this context as an abstract set of rules intended to instruct computers - or, when multiple computers are coordinated to perform a given task, a system - to perform a designated task that support the achievement of a business objective. If the instructions are incorrectly stated, there is not guarantee that the business objective will be achieved. If a specific set of instructions designed to prevent systems from deviate from their business objectives of confidentiality, integrity and availability is missing, one can say that the sytem is vulnerable and, for that, there is no guarantee that neither the business objectives nor the user needs can be satisfied as intended and, in some cases, some damage shall be considered as expected.*
 
--	**Framing:**
+### **Framing**
 
--	**Business objective:** *The instructions for all systems should produce the intended outcome in a not vulnerable way.*
+#### **Business objective:** 
+*The instructions for all systems should produce the intended outcome in a not vulnerable way.*
 
-- **Uncertainty and controls:**
+#### **Uncertainty and controls:**
 
 | Uncertainty | Control (logical operator AND applies)   |Control fails when (logical operator OR applies)|
 | ----------- | ----------- | ----------- |
@@ -34,4 +35,15 @@ ISO definition of risk
 |A minimal level of vulnerable code should be expected for every system.|Implement procedures to report vulnerabilities found and to mitigate their effects on vulnerable systems in a timely manner.|There are no procedures to report and mitigate vulnerabilities OR procedures to report and mitigate vulnerabilities are in place but are not efficient to mitigate vulnerabilities in a timely manner.|
 |The effects of exposing vulnerable systems cannot be fully predicted.|Introduce a monitoring and alert program for suspicious behavior and train staff on how to react on suspicious cases.|There is no monitoring and alert program in place OR there is no training of staff on how to react on suspicious cases OR there are monitor or training program but they are insufficient to produce an adequate response in case of suspicious.|
 |The effectiveness of the vulnerability program cannot be take as granted|Introduce measurable indicators of performance including, at least: the progress of vulnerabilities detected and fixed AND the reduction of the likelihood of occurency of vulnerabilities AND the improvement of the timelines to fix vulnerable code AND the awareness on the main vulnerabilities detected by the program AND the training on how to detect and correct the main vulnerabilities detected by the program.|There are no measurable indicators of performance in place OR measurable indicators of performance are in place but at least one of the minimal required indicators is missing.|
+
+#### **Negative effects:**
+  
+  - Loss of control or ownership of business processes and procedures.
+  - Loss of profit due to impairment or recovery of the business activities.
+  - Contractual violations due to impairment of activities or misalignment of the deliverables.
+  - Violation of law or compliance requirements.
+  - Increasing of the operational cost due to incident handling and system refactoring.
+
+## How to manage this risk
+The defined controls should be evaluated in a defined basis or via a randomized controlled trial (RCT) way. Every evidence of failure of a given control should be recorded for that evaluation and used to produce the frequency of occurency (F) of this risk. The negative impact (I) should be assessed and estimate to compose the impact of this risk. The risk score should be considered as the result of FxI. Where the impact (I) cannot be assessed in terms of financial impact, a opportunity cost evaluation should be used instead.
 
